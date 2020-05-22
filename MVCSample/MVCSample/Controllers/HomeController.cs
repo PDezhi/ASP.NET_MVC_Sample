@@ -26,5 +26,10 @@ namespace MVCSample.Controllers
 
             return View();
         }
+
+        public string HelloWorld(string firstName, string lastName)
+        {
+            return $"Hello World from {firstName} {lastName}!";
+        }
     }
 }
