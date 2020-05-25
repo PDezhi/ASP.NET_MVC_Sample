@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "GetListUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetListUser</h2>
+<h3>@ViewBag.Message</h3>
+<h1>@ViewBag.MyList</h1>
+
+@{ 
+    foreach(int num in ViewBag.Mylist)
+    {
+        <h1>This is element number @num</h1>
+    }
+}
+
+@model int
+@foreach(var i in ViewBag.Mylist){
+    @Html.DisplayFor(model => i)
+}
