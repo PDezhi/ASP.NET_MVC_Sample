@@ -18,22 +18,22 @@ namespace MVCSample.Controllers
             //MvcApplication.studentsList.Clear();
             //MvcApplication.studentsList.Add(new Models.Student { StudentId=1, StudentName = "aaa", Age = 20 });
             //MvcApplication.studentsList.Add(new Models.Student { StudentId=2, StudentName = "bbb", Age = 5 });
-            string queryString = "SELECT OrderID, CustomerID FROM dbo.Orders;";
-            using (SqlConnection connection = new SqlConnection(
-                       connectionString))
-            {
-                SqlCommand command = new SqlCommand(
-                    queryString, connection);
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(String.Format("{0}, {1}",
-                            reader[0], reader[1]));
-                    }
-                }
-            }
+            //string queryString = "SELECT OrderID, CustomerID FROM dbo.Orders;";
+            //using (SqlConnection connection = new SqlConnection(
+            //           connectionString))
+            //{
+            //    SqlCommand command = new SqlCommand(
+            //        queryString, connection);
+            //    connection.Open();
+            //    using (SqlDataReader reader = command.ExecuteReader())
+            //    {
+            //        while (reader.Read())
+            //        {
+            //            Console.WriteLine(String.Format("{0}, {1}",
+            //                reader[0], reader[1]));
+            //        }
+            //    }
+            //}
 
 
             return View(MvcApplication.studentsList);
